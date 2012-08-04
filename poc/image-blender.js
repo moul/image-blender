@@ -58,9 +58,9 @@ $(function(){
                   ImageBlender.render();
                 }
                 if (options.sleepTime > 0) {
-                  setTimeout(function() { ImageBlender.done(); }, options.sleepTime);
+                  setTimeout(function() { ImageBlender.done(img); }, options.sleepTime);
                 } else {
-                  ImageBlender.done();
+                  ImageBlender.done(img);
                 }
             },
             render: function() {
@@ -78,8 +78,11 @@ $(function(){
                     ImageBlender.process(object);
                 }
             },
-            done: function() {
+            done: function(img) {
                 isRunning = false;
+                if (img.fn) {
+                    img.fn();
+                }
                 if (queue.length > 0) {
                     ImageBlender.call(queue.shift());
                 } else {
