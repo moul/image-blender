@@ -3,6 +3,11 @@ Image blender
 
 Blends images together
 
+Demo
+----
+
+http://moul.github.com/image-blender/
+
 Example
 -------
 
