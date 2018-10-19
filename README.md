@@ -1,6 +1,8 @@
 Image blender
 =============
 
+[![GuardRails badge](https://badges.production.guardrails.io/moul/image-blender.svg)](https://www.guardrails.io)
+
 Blends images together
 
 Demo
